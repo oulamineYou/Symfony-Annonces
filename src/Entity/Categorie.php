@@ -25,7 +25,7 @@ class Categorie
     private $name;
 
     /**
-     * Gedmo\slug(fields={"name"})
+     * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $slug;
