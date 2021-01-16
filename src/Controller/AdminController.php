@@ -22,7 +22,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin/categorie/ajoute", name="categorie_ajout")
+     * @Route("/admin/categorie/ajoute", name="ajoute_categorie")
      */
     public function ajouterCategorie(Request $request): Response
     {
