@@ -48,6 +48,16 @@ class Users implements UserInterface
      */
     private $annonces;
 
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $FirstName;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $LastName;
+
     public function __construct()
     {
         $this->annonces = new ArrayCollection();
@@ -169,6 +179,30 @@ class Users implements UserInterface
                 $annonce->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->FirstName;
+    }
+
+    public function setFirstName(string $FirstName): self
+    {
+        $this->FirstName = $FirstName;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->LastName;
+    }
+
+    public function setLastName(string $LastName): self
+    {
+        $this->LastName = $LastName;
 
         return $this;
     }

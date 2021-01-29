@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- Axentix CSS minified version -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.0.0/dist/css/axentix.min.css">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body class="layout with-sidenav">
+        <header>
+            <nav class="navbar airforce dark-1">
+                <a href="{{ path('app_home') }}" target="_blank" class="navbar-brand">Annonces</a>
+                <div class="navbar-menu ml-auto">
+                    <a class="navbar-link active" href="#">Acueil</a>
+                    <a class="navbar-link" href="#">Link</a>
+                    <a class="navbar-link" href="#">Link</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="example-sidenav" data-ax="sidenav" class="sidenav shadow-1 large fixed white">
+            <div class="sidenav-header">
+                <button data-target="example-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="#" class="sidenav-link active">Link 1</a>
+            <a href="#" class="sidenav-link">Link 2</a>
+            <a href="#" class="sidenav-link">Link 3</a>
+            <a href="#" class="sidenav-link">Link 4</a>
+        </div>
+
+        {% block body %}{% endblock %}
+        <footer class="footer airforce">
+            Copyright © 2020 - Example
+        </footer>
+        <!-- Axentix JS minified version -->
+        <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0/dist/js/axentix.min.js"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
